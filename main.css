@@ -1,0 +1,178 @@
+:root {
+  --primary: #346288;
+  --accent: #b32b29;
+  --success: #53B276;
+  --error: #AF0F0B;
+  --background-color: #f2f2f2;
+  --text-color: #0d0d0d;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app {
+  margin: 1em 3em;
+}
+
+.runway-container {
+  margin: 1em 3em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.view-btn:hover,
+.view-btn:focus {
+  text-decoration: underline;
+}
+
+.icon-btn {
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  display: flex;
+}
+
+.border-right {
+  border-right: 1px solid lightgray;
+  margin-right: 5em;
+  padding-bottom: 5em;
+}
+
+.weather,
+.fuel,
+.radios {
+  font-size: 16px;
+}
+
+table {
+  margin-top: 2em;
+}
+
+.t-right {
+  text-align: right;
+}
+
+#back-btn {
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: var(--background-color);
+  color: var(--accent);
+  padding: .5em;
+  border: 1px solid var(--accent);
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+#back-btn:hover {
+  background-color: #fad4d3;
+}
+
+table>thead>tr>td,
+table>tbody>tr>td {
+  border: 1px solid #a6a3a3;
+  padding: 1em;
+  margin: .5em;
+}
+
+.max-width {
+  width: 100%;
+}
+
+table>thead>tr>td {
+  font-size: large;
+  font-weight: bold;
+}
+
+.header {
+  width: calc(100% - 1em);
+  padding-left: 1em;
+  height: 3em;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header>.app-title {
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+  color: var(--background-color);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  height: 2em;
+  width: calc(100% - 1em);
+  padding-right: 1em;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer>div {
+  width: 100%;
+  text-align: right;
+  color: var(--background-color);
+}
+
+#loading {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#loading>h1 {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.pl {
+  padding-left: 1em;
+}
+
+.pr {
+  padding-right: 1em;
+}
+
+.pt {
+  padding-top: 1em;
+}
+
+.pb {
+  padding-bottom: 1em;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s;
+}

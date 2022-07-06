@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./main.js" type="module" async></script>
+</head>
+
+<body>
+    <!-- TEMPLATES -->
+    <table hidden>
+        <tr id="list-row-template" hidden>
+            <td>
+                <span class="name"></span>
+            </td>
+            <td>
+                <span class="max-runway"></span>
+            </td>
+            <td>
+                <div class="d-flex flex-col">
+                    <div><img src="./assets/wind.svg" height="14px" width="14px" />
+                        <span class="wind"></span>
+                    </div>
+                    <div>
+                        <img src="./assets/eye.svg" height="14px" width="14px" />
+                        <span class="visibility"></span>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="d-flex flex-col">
+                    <span class="fuel"></span>
+                </div>
+            </td>
+            <td>
+                <button type="button" class="icon-btn view-btn">View
+                    <img src="./assets/arrow-right.svg" height="16px" width="16px" />
+                </button>
+            </td>
+        </tr>
+        <tr id="list-runway-template" hidden>
+            <td>
+                <span class="runway_identifier"></span>
+            </td>
+            <td class="t-right">
+                <span class="length"></span>
+            </td>
+            <td class="t-right">
+                <span class="width"></span>
+            </td>
+            <td class="t-right">
+                <span class="slope"></span>
+            </td>
+            <td class="t-right">
+                <span class="elevation"></span>
+            </td>
+            <td>
+                <span class="surface"></span>
+            </td>
+            <td class="t-right">
+                <span class="runway_heading"></span>
+            </td>
+            <td class="t-right">
+                <span class="weight_limit"></span>
+            </td>
+        </tr>
+    </table>
+    <!-- BODY -->
+
+    <div class="header">
+        <div class="app-title">My Airports</div>
+    </div>
+    <div class="app">
+        <div id="airport-list-view">
+            <h2>Airports</h2>
+            <table class="airport-list-table">
+                <thead>
+                    <tr>
+                        <td>Airport</td>
+                        <td>Max Runway Size</td>
+                        <td>Weather</td>
+                        <td>Fuel</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody id="airport-list">
+                </tbody>
+            </table>
+        </div>
+        <div id="airport-view" hidden>
+            <button type="button" id="back-btn">Back</button>
+            <h2 class="name"></h2>
+            <div class="d-flex max-width">
+                <div class="d-flex flex-col max-width border-right">
+                    <h2>Weather</h2>
+                    <div class="weather"></div>
+                </div>
+                <div class="d-flex flex-col max-width border-right">
+                    <h2>Fuel</h2>
+                    <div class="fuel">
+                    </div>
+                </div>
+                <div class="d-flex flex-col max-width">
+                    <h2>Radios</h2>
+                    <div class="radios">
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-col runway-container">
+                <table class="runway-list-table">
+                    <thead>
+                        <tr>
+                            <td>Identifier</td>
+                            <td class="t-right">Length</td>
+                            <td class="t-right">Width</td>
+                            <td class="t-right">Slope</td>
+                            <td class="t-right">Elevation</td>
+                            <td>Surface Type</td>
+                            <td class="t-right">Runway Heading</td>
+                            <td class="t-right">Weight Limit</td>
+                        </tr>
+                    </thead>
+                    <tbody class="runways">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="loading">
+            <h1>Loading, please wait</h1>
+            <div class="d-flex flex-col full-width">
+                <img src="./assets/spinner.svg" height="200px" width="100%" />
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copyright">Copyright © 2022 My Airports, LLC</div>
+    </div>
+</body>
+
+</html>
